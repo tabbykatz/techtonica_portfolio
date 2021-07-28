@@ -14,6 +14,15 @@ body {
   overflow: auto;
 }
 
+#img_box {
+  display: inline;
+  width: 20%;
+}
+
+#img_box img {
+  max-width: 30%;
+}
+
 .flex-container {
   width: 100%;
   justify-content: center;
@@ -50,8 +59,9 @@ body {
 }
 
 .forms {
-  position: relative;
-  bottom: 0;
+  position: fixed;
+  bottom: 20px;
+
   margin-left: 5px;
 }
 
@@ -61,6 +71,13 @@ body {
   margin-left: 10%;
   background: white;
   border-radius: 8px;;
+}
+
+#display_div {
+ position: absolute;
+ bottom: 20px;
+ left: 20%;
+
 }
 
 .intro_container {
@@ -74,14 +91,13 @@ body {
 }
 
 .socials_header {
+  position: absolute;
   justify-content: flex-end;
   height: 5%;
-  box-sizing: border-box;
   width: 98%;
-  position: relative;
-  bottom: 0px;
+  bottom: 0;
   right: 0;
-  margin: 10px;
+
 }
 
 .contact {

@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="shortcut icon" href="favicon.png" />
+
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
   <link rel="stylesheet" href="css/index.css">
   <title>Tabitha O'Melay: Software Engineer</title>
 </head>
@@ -14,7 +18,10 @@
   <container class="entirepage">
     <div class="flex-container nowrap top">
       <div class="flex-item intro">
-        <span class="intro_container"><img class="avatar" src="images/me.png" alt="picture of Tabitha">Hi, I'm Tabitha and I love
+        <span class="intro_container">
+          <div id="img_box"><img class="avatar" src="images/me.png" alt="picture of Tabitha">
+          </div>
+          Hi, I'm Tabitha and I love
           <span class="typer" id="main" data-words=
                 "Python,Javascript,Berkeley,APIs,bit manipulation,solving problems"
                 data-delay="100" data-deleteDelay="1500"></span>
@@ -23,22 +30,20 @@
       </div>
     </div>
     <div class="forms">
-    <p><input class="form inputs" type="text" placeholder="Name" required name="Name" onsubmit=event.preventDefault()></p>
-    <p><input class="form inputs" type="text" placeholder="Email" required name="Email" onsubmit=event.preventDefault()></p>
-    <p><input class="form inputs" type="text" placeholder="Phone" optional name="Phone" onsubmit=event.preventDefault()></p>
-    <p><input class="form inputs" type="text" placeholder="Address" optional name="Address" onsubmit=event.preventDefault()></p>
+    <p><input id="nameForm" class="form inputs" type="text" placeholder="Name" required name="Name" onsubmit=event.preventDefault()></p>
+    <p><input id="emailForm" class="form inputs" type="text" placeholder="Email" optional name="Email" onsubmit=event.preventDefault()></p>
+    <p><input id="msgForm" class="form inputs" type="text" placeholder="Ask me anything" required name="Message" onsubmit=event.preventDefault()></p>
 
-      <button id="transact_button" class="buttons" type="submit" value="Submit" onclick=event.preventDefault()>SUBMIT</button>
-    </div>
+
+   <button id="submit_button" class="buttons" type="submit" value="" onclick=event.preventDefault()>SUBMIT</button>
+   </div>
+   <div id="display_div"></div>
     <ul class="flex-container nowrap socials_header">
       <li class="social"><a href="https://instagram.com/tabby_katz" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a></li>
       <li class="social"><a href="https://github.com/tabbykatz" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon></a></li>
       <li class="social"><a href="https://twitter.com/tabby__katz" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-twitter"></ion-icon></a></li>
       <li class="social"><a href="https://www.linkedin.com/in/tabithaomelay/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a></li>
     </ul>
-
-
-
     <!-- <div class="pages">
       <a href="#">Projects</a>
       <hr>
@@ -47,7 +52,6 @@
       <a href="#" download>Resume</a>
     </div> -->
   </container>
-
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
