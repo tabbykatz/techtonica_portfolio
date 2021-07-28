@@ -4,23 +4,31 @@
   --top-width: 70%;
   --top-picture-part: calc(1/4);
   --top-intro-part: calc(3/4);
+  --text: #000;
+  --background: #fff;
 }
 
 body {
   font-family: 'Source Code Pro', monospace;
-  background-color: transparent;
+  background-color: var(--background);
   margin: 0;
   margin-top: 5%;
   overflow: auto;
 }
 
 #img_box {
-  display: inline;
-  width: 20%;
+  display: flex;
+  width: 100%;
 }
 
 #img_box img {
   max-width: 30%;
+}
+
+#display_div {
+ position: absolute;
+ bottom: 20px;
+ left: 20%;
 }
 
 .flex-container {
@@ -44,11 +52,9 @@ body {
   font-weight: bold;
   font-size: 2.5rem;
   text-align: center;
-  color: #011627;
 }
 
 .avatar_container {
-  background-color: transparent;
   width: calc(var(--top-width)*var(--top-picture-part));
 }
 
@@ -58,26 +64,17 @@ body {
   height: auto;
 }
 
-.forms {
-  position: fixed;
-  bottom: 20px;
-
-  margin-left: 5px;
+form {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 .forms button {
   font-size: 1.25rem;
   margin-bottom: 10%;
   margin-left: 10%;
-  background: white;
   border-radius: 8px;;
-}
-
-#display_div {
- position: absolute;
- bottom: 20px;
- left: 20%;
-
 }
 
 .intro_container {
@@ -86,8 +83,10 @@ body {
   line-height: normal;
 }
 
+
 .typer {
   vertical-align: top;
+
 }
 
 .socials_header {
@@ -95,7 +94,7 @@ body {
   justify-content: flex-end;
   height: 5%;
   width: 98%;
-  bottom: 0;
+  top: 0;
   right: 0;
 
 }
@@ -110,39 +109,12 @@ body {
 }
 
 .social ion-icon {
-  color: #000;
+  color: var(--text);
   height: 100%;
   width: 50px;
 }
-
-.pages {
-  position: absolute;
-  bottom: 0;
-  float: left;
-  margin-left: 5%;
-  margin-right: auto;
-  text-align: left;
-  width:30%;
-  font-size: 1.5rem;
-}
-
-.pages a {
-  color: #011627;
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-.pages a:visited {
-  color: #333;
-}
-
-@media (max-height: 850px) {
-  .forms {
+@media (max-height: 700px) {
+  form {
     display: none;
   }
-
-  .forms button {
-    display:none;
-  }
 }
-

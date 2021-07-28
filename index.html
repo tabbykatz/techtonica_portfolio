@@ -8,19 +8,20 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="shortcut icon" href="favicon.png" />
 
-  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
   <link rel="stylesheet" href="css/index.css">
   <title>Tabitha O'Melay: Software Engineer</title>
 </head>
 <body>
   <container class="entirepage">
+
+
     <div class="flex-container nowrap top">
       <div class="flex-item intro">
+        <div id="img_box"><img class="avatar" src="images/me.png" alt="picture of Tabitha">
+        </div>
         <span class="intro_container">
-          <div id="img_box"><img class="avatar" src="images/me.png" alt="picture of Tabitha">
-          </div>
+
           Hi, I'm Tabitha and I love
           <span class="typer" id="main" data-words=
                 "Python,Javascript,Berkeley,APIs,bit manipulation,solving problems"
@@ -29,14 +30,42 @@
           <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
       </div>
     </div>
-    <div class="forms">
-    <p><input id="nameForm" class="form inputs" type="text" placeholder="Name" required name="Name" onsubmit=event.preventDefault()></p>
-    <p><input id="emailForm" class="form inputs" type="text" placeholder="Email" optional name="Email" onsubmit=event.preventDefault()></p>
-    <p><input id="msgForm" class="form inputs" type="text" placeholder="Ask me anything" required name="Message" onsubmit=event.preventDefault()></p>
+
+    <form>
+      <div>
+        <input id="name" placeholder="name*" name="name" type="text" required>
+        <span class="validity"></span>
+      </div>
+      <div>
+        <input id="email" placeholder="email*" name="email" type="email" required
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+        <span class="validity"></span>
+      </div>
+      <div>
+        <input id="address0" placeholder="address" name="address" type="text" optional>
+      </div>
+      <div>
+        <input id="address1" placeholder="city" name="city" type="text" optional>
+      </div>
+      <div>
+        <input id="address2" placeholder="state" name="state" type="text" optional>
+      </div>
+      <div>
+        <input id="address3" placeholder="zip || zip+4" name="zip" type="text" optional
+        pattern="^[0-9]{5}(?:-[0-9]{4})?$">
+        <span class="validity"></span>
+      </div>
 
 
-   <button id="submit_button" class="buttons" type="submit" value="" onclick=event.preventDefault()>SUBMIT</button>
-   </div>
+      <div>
+        <input id="telNo" placeholder="tel: xxx-xxx-xxxx" name="telNo" type="tel" optional
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <span class="validity"></span>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
    <div id="display_div"></div>
     <ul class="flex-container nowrap socials_header">
       <li class="social"><a href="https://instagram.com/tabby_katz" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a></li>
@@ -53,5 +82,8 @@
     </div> -->
   </container>
   <script src="js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
