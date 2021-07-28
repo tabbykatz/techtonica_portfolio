@@ -6,6 +6,7 @@
   --top-intro-part: calc(3/4);
   --text: #000;
   --background: #fff;
+
 }
 
 body {
@@ -14,6 +15,12 @@ body {
   margin: 0;
   margin-top: 5%;
   overflow: auto;
+}
+
+#canvas {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 #img_box {
@@ -65,16 +72,19 @@ body {
 }
 
 form {
+  display: block;
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
 
-.forms button {
+
+button {
   font-size: 1.25rem;
   margin-bottom: 10%;
-  margin-left: 10%;
-  border-radius: 8px;;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 8px;
 }
 
 .intro_container {
@@ -115,6 +125,16 @@ form {
 }
 @media (max-height: 700px) {
   form {
+    display: none;
+  }
+
+  #canvas {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #canvas {
     display: none;
   }
 }
