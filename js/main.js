@@ -2,8 +2,6 @@
 (function() {
   "use strict";
 
-
-
   /* selector helper function for elements*/
   const select = (el, all = false) => {
     el = el.trim()

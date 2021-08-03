@@ -437,7 +437,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-filters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-filters li:hover, .portfolio #portfolio-filters li.filter-active {
   color: var(--color-link);
 }
 
@@ -450,7 +450,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
+  background: rgba(74, 129, 95, 0.8);
 }
 
 .portfolio .portfolio-wrap::before {
