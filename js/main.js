@@ -171,15 +171,12 @@
 
     /* console log the form data */
 
-    let submitButton = select('#submit');
-    submitButton.addEventListener('click', function(event) {
+    upon('click', '#submit', function(event) {
       const listEls = [];
       let firstName = select('#firstName').value;
       let lastName = select('#lastName').value;
       let email = select('#email').value;
       let phone = select('#phone').value;
-
-
       let address = select('#address1').value;
       let city = select('#city').value;
       let state = select('#state').value;
@@ -192,6 +189,5 @@
       }
 
     )
-})()
-
-
+}
+())
